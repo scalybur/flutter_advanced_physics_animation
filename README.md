@@ -1,8 +1,5 @@
 # advanced_physics_based_anim
 
-A new Flutter application.
+Advanced Physics Based Animations in Dart's Flutter Framework
 
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+## Nahuel Cabrera
