@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
 import 'dart:math';
 
-const BOX_COLOR = Colors.cyan;
+const BOX_COLOR = Colors.lightGreenAccent;
 
 void main() => runApp(MyApp());
 
@@ -167,13 +167,13 @@ class BoxPainter extends CustomPainter
     canvas.clipRect(Rect.fromLTWH(0.0,0.0,size.width, size.height));
 
     final boxValueY = size.height - (size.height * boxPosition);
-    final prexBoxValueY = size.height - (size.height * boxPosition);
-    final midPointY = ((boxValueY - prexBoxValueY) * 1.2 + prexBoxValueY)
+    final prevBoxValueY = size.height - (size.height * boxPositionOnStart);
+    final midPointY = ((boxValueY - prevBoxValueY) * 1.2 + prevBoxValueY)
     .clamp(0.0, size.height);
 
     Point left, mid, right;
-    left = Point(-100.0, prexBoxValueY);
-    right = Point(size.width + 50.0, prexBoxValueY);
+    left = Point(-100.0, prevBoxValueY);
+    right = Point(size.width + 50.0, prevBoxValueY);
 
     if (null != touchPoint)
     {
